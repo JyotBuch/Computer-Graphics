@@ -1,2 +1,2 @@
 # Computer-Graphics
-This repository contains codes in C++, where I have used to graphics library to draw shapes and animations
+This repository contains codes in C++, where I have used the graphics library to draw shapes and animations
