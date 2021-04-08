@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <conio.h>
-#include <graphics.h>
-#include <dos.h>
+#include<iostream>
+#include<graphics.h>
+using namespace std;
 
 void BoundaryFill4(int x,int y,int fill, int boundary)
 {
@@ -17,29 +16,29 @@ void BoundaryFill4(int x,int y,int fill, int boundary)
         BoundaryFill4(x,y+1,fill,boundary);
         BoundaryFill4(x,y-1,fill,boundary);
     }
-    
+
 
 }
 
-void main()
+int main()
 {
-    int gm,gd=DETECT,radius;
-	int x,y;
+    int gd = DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int x,y,r;
+    cout<<"\n\n\nBoundary Fill ALGORITHM\n\n\n";
+    cout<<"Enter x position of circle : ";
+    cin>>x;
+    cout<<"Enter y position of circle : ";
+    cin>>y;
+    printf("Enter radius of circle:");
+	cin>>r;
 
-	printf("Enter x position for circle:");
-	scanf("%d",&x);
-	printf("Enter y position for circle:");
-	scanf("%d",&y);
-	printf("Enter radius of circle:");
-	scanf("%d",&radius);
-
-	initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
-	circle(x,y,radius);
-
+	circle(x,y,r);
     BoundaryFill4(x,y,4,15);
     delay(5000);
 
     getch();
     closegraph();
 
+    return 0;
 }
